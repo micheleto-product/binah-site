@@ -3,9 +3,10 @@ pages:
   script:
     - mkdir public
     - cp index.html public/
-    - cp -r css public/ || true
-    - cp -r js public/ || true
-    - cp -r assets public/ || true
+    - cp -r "architecture information" public/
+    - cp -r roots public/
+    - cp -r script public/
+    - cp -r style public/
   artifacts:
     paths:
       - public
