@@ -2,11 +2,7 @@ pages:
   stage: deploy
   script:
     - mkdir public
-    - cp index.html public/
-    - cp -r "architecture information" public/
-    - cp -r roots public/
-    - cp -r script public/
-    - cp -r style public/
+    - cp -r . public
   artifacts:
     paths:
       - public
