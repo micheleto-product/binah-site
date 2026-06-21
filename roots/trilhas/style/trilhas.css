@@ -1,0 +1,814 @@
+/* ========================================= */
+/* BINAH - TRILHAS */
+/* ========================================= */
+
+:root {
+
+    --midnight: #0D1B2A;
+    --gold: #C9A44C;
+    --ivory: #F7F4EE;
+    --graphite: #2A2A2A;
+    --sage: #8A9485;
+
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+
+    --shadow-sm: 0 4px 12px rgba(13,27,42,.05);
+    --shadow-md: 0 10px 30px rgba(13,27,42,.08);
+
+}
+
+/* ========================================= */
+/* RESET */
+/* ========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--ivory);
+
+    color:var(--graphite);
+
+    font-family:'Inter',sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+/* ========================================= */
+/* GLOBAL */
+/* ========================================= */
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:0 24px;
+
+}
+
+section{
+
+    padding:100px 0;
+
+}
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:64px;
+
+}
+
+.section-heading span{
+
+    color:var(--gold);
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+}
+
+.section-heading h2{
+
+    font-family:'Space Grotesk',sans-serif;
+
+    font-size:52px;
+
+    color:var(--midnight);
+
+    margin-top:16px;
+
+}
+
+/* ========================================= */
+/* HEADER */
+/* ========================================= */
+
+.header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    background:rgba(247,244,238,.85);
+
+    backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(13,27,42,.05);
+
+}
+
+.navbar{
+
+    height:88px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    text-decoration:none;
+
+    color:var(--midnight);
+
+    font-family:'Space Grotesk';
+
+    font-weight:700;
+
+    font-size:24px;
+
+}
+
+.desktop-menu{
+
+    display:flex;
+
+    gap:32px;
+
+}
+
+.desktop-menu a{
+
+    text-decoration:none;
+
+    color:var(--graphite);
+
+    font-weight:500;
+
+}
+
+.nav-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+/* ========================================= */
+/* BUTTONS */
+/* ========================================= */
+
+.btn-primary{
+
+    border:none;
+
+    cursor:pointer;
+
+    background:var(--midnight);
+
+    color:white;
+
+    padding:16px 24px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.btn-secondary{
+
+    background:white;
+
+    border:1px solid rgba(13,27,42,.08);
+
+    color:var(--midnight);
+
+    padding:14px 20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+}
+
+/* ========================================= */
+/* MOBILE MENU */
+/* ========================================= */
+
+.mobile-toggle{
+
+    display:none;
+
+    flex-direction:column;
+
+    gap:4px;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+}
+
+.mobile-toggle span{
+
+    width:22px;
+
+    height:2px;
+
+    background:var(--midnight);
+
+}
+
+.mobile-menu{
+
+    position:fixed;
+
+    top:88px;
+
+    left:0;
+
+    width:100%;
+
+    background:white;
+
+    padding:24px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    transform:translateY(-150%);
+
+    transition:.35s ease;
+
+    box-shadow:var(--shadow-md);
+
+    z-index:998;
+
+}
+
+.mobile-menu.active{
+
+    transform:translateY(0);
+
+}
+
+.mobile-menu a{
+
+    text-decoration:none;
+
+    color:var(--midnight);
+
+    font-weight:600;
+
+}
+
+/* ========================================= */
+/* HERO */
+/* ========================================= */
+
+.hero{
+
+    padding-top:80px;
+
+}
+
+.hero-content{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
+
+}
+
+.eyebrow{
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:.08em;
+
+}
+
+.hero h1{
+
+    font-family:'Space Grotesk';
+
+    font-size:72px;
+
+    line-height:1.05;
+
+    margin-top:24px;
+
+    color:var(--midnight);
+
+}
+
+.hero p{
+
+    max-width:650px;
+
+    margin:24px auto 0;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+/* ========================================= */
+/* PROGRESS OVERVIEW */
+/* ========================================= */
+
+.progress-overview{
+
+    margin-top:60px;
+
+}
+
+.progress-card{
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:32px;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.progress-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:24px;
+
+}
+
+.progress-header h3{
+
+    font-family:'Space Grotesk';
+
+    color:var(--midnight);
+
+    font-size:28px;
+
+}
+
+.progress-header p{
+
+    color:var(--sage);
+
+    margin-top:6px;
+
+}
+
+.percentage{
+
+    font-size:48px;
+
+    font-weight:700;
+
+    color:var(--midnight);
+
+}
+
+.progress-bar{
+
+    width:100%;
+
+    height:12px;
+
+    background:#ECECEC;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+.progress-fill{
+
+    width:48%;
+
+    height:100%;
+
+    background:var(--gold);
+
+}
+
+/* ========================================= */
+/* MODULES */
+/* ========================================= */
+
+.module{
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:32px;
+
+    margin-bottom:24px;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.module-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:24px;
+
+}
+
+.module-header h3{
+
+    font-family:'Space Grotesk';
+
+    color:var(--midnight);
+
+}
+
+.module-header span{
+
+    color:var(--sage);
+
+    font-size:14px;
+
+}
+
+.lesson{
+
+    padding:16px 0;
+
+    border-bottom:1px solid rgba(13,27,42,.06);
+
+    font-size:16px;
+
+}
+
+.lesson:last-child{
+
+    border-bottom:none;
+
+}
+
+.completed{
+
+    color:#4D7B57;
+
+}
+
+.current{
+
+    color:var(--midnight);
+
+    font-weight:600;
+
+}
+
+.locked{
+
+    color:#9EA7A2;
+
+}
+
+.module a,
+.module a:visited,
+.module a:hover,
+.module a:active {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+/* ========================================= */
+/* OUTRAS TRILHAS */
+/* ========================================= */
+
+.trail-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+
+}
+
+.trail-card{
+
+    background:white;
+
+    padding:32px;
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.3s;
+
+}
+
+.trail-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.trail-icon{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:16px;
+
+    background:rgba(201,164,76,.12);
+
+    color:var(--gold);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    margin-bottom:24px;
+
+}
+
+.trail-card h3{
+
+    font-family:'Space Grotesk';
+
+    color:var(--midnight);
+
+    margin-bottom:12px;
+
+}
+
+.trail-card p{
+
+    line-height:1.7;
+
+    margin-bottom:16px;
+
+}
+
+.trail-card span{
+
+    color:var(--sage);
+
+    font-size:14px;
+
+}
+
+/* ========================================= */
+/* CTA */
+/* ========================================= */
+
+.cta-box{
+
+    background:var(--midnight);
+
+    color:white;
+
+    border-radius:32px;
+
+    text-align:center;
+
+    padding:80px 40px;
+
+}
+
+.cta-box span{
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+    font-size:14px;
+
+}
+
+.cta-box h2{
+
+    font-family:'Space Grotesk';
+
+    font-size:56px;
+
+    margin:24px 0 40px;
+
+}
+
+/* ========================================= */
+/* FOOTER */
+/* ========================================= */
+
+.footer{
+
+    border-top:1px solid rgba(13,27,42,.08);
+
+    padding:80px 0;
+
+}
+
+.footer-content{
+
+    text-align:center;
+
+}
+
+.footer-content h3{
+
+    font-family:'Space Grotesk';
+
+    color:var(--midnight);
+
+    font-size:32px;
+
+}
+
+.footer-content p{
+
+    margin-top:16px;
+
+    color:var(--sage);
+
+    max-width:500px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+    line-height:1.8;
+
+}
+
+/* ========================================= */
+/* REVEAL */
+/* ========================================= */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(24px);
+
+    transition:all .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media(max-width:992px){
+
+    .hero h1{
+
+        font-size:56px;
+
+    }
+
+    .trail-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    section{
+
+        padding:80px 0;
+
+    }
+
+    .desktop-menu{
+
+        display:none;
+
+    }
+
+    .mobile-toggle{
+
+        display:flex;
+
+    }
+
+    .btn-secondary{
+
+        display:none;
+
+    }
+
+    .hero h1{
+
+        font-size:42px;
+
+    }
+
+    .section-heading h2{
+
+        font-size:36px;
+
+    }
+
+    .cta-box h2{
+
+        font-size:38px;
+
+    }
+
+    .progress-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:16px;
+
+    }
+
+    .percentage{
+
+        font-size:36px;
+
+    }
+
+    .module-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:8px;
+
+    }
+
+}

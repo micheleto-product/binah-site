@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Binah | Perfil</title>
+
+    <link rel="stylesheet" href="style/perfil.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                BINAH
+            </a>
+
+            <nav class="desktop-menu">
+
+                <a href="trilhas.html">Trilhas</a>
+                <a href="biblioteca.html">Biblioteca</a>
+                <a href="dashboard.html">Progresso</a>
+                <a href="perfil.html" class="active">Perfil</a>
+
+            </nav>
+
+            <button class="mobile-toggle" id="mobileToggle">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- MOBILE MENU -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="trilhas.html">Trilhas</a>
+        <a href="biblioteca.html">Biblioteca</a>
+        <a href="dashboard.html">Progresso</a>
+        <a href="perfil.html">Perfil</a>
+
+    </div>
+
+    <!-- PROFILE HERO -->
+
+    <section class="profile-hero">
+
+        <div class="container">
+
+            <div class="profile-card reveal">
+
+                <div class="avatar">M</div>
+
+                <div class="profile-info">
+
+                    <h1>Micheleto</h1>
+
+                    <p>micheleto@email.com</p>
+
+                    <span class="member-since">Estudando desde Março de 2026</span>
+
+                </div>
+
+                <button class="btn-secondary">
+                    Editar Perfil
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SETTINGS -->
+
+    <section class="settings-section">
+
+        <div class="container">
+
+            <div class="settings-layout">
+
+                <!-- TABS -->
+
+                <nav class="tabs reveal" id="tabs">
+
+                    <button class="tab active" data-tab="conta">
+                        Dados da Conta
+                    </button>
+
+                    <button class="tab" data-tab="preferencias">
+                        Preferências
+                    </button>
+
+                    <button class="tab" data-tab="configuracoes">
+                        Configurações
+                    </button>
+
+                </nav>
+
+                <!-- PAINÉIS -->
+
+                <div class="panels">
+
+                    <!-- DADOS DA CONTA -->
+
+                    <div class="panel active reveal" id="conta">
+
+                        <div class="panel-card">
+
+                            <h2>Dados da Conta</h2>
+
+                            <p class="panel-description">
+                                Mantenha suas informações atualizadas.
+                            </p>
+
+                            <form class="settings-form">
+
+                                <div class="form-group">
+
+                                    <label for="nome">Nome completo</label>
+
+                                    <input type="text" id="nome" value="Micheleto">
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="email">E-mail</label>
+
+                                    <input type="email" id="email" value="micheleto@email.com">
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label>Senha</label>
+
+                                    <button type="button" class="btn-secondary small">
+                                        Alterar senha
+                                    </button>
+
+                                </div>
+
+                                <button type="submit" class="btn-primary">
+                                    Salvar alterações
+                                </button>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                    <!-- PREFERÊNCIAS -->
+
+                    <div class="panel" id="preferencias">
+
+                        <div class="panel-card">
+
+                            <h2>Preferências</h2>
+
+                            <p class="panel-description">
+                                Usamos isso para recomendar o conteúdo certo, no momento certo.
+                            </p>
+
+                            <div class="preference-block">
+
+                                <h3>Temas de interesse</h3>
+
+                                <div class="chip-group" id="interestChips">
+
+                                    <button class="chip active">Torá</button>
+                                    <button class="chip active">História</button>
+                                    <button class="chip">Hebraico</button>
+                                    <button class="chip">Cabalá</button>
+                                    <button class="chip">Conversão</button>
+                                    <button class="chip">Filosofia</button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="preference-block">
+
+                                <h3>Trilhas favoritas</h3>
+
+                                <div class="favorite-list">
+
+                                    <div class="favorite-item">
+                                        <span>Introdução ao Judaísmo</span>
+                                        <button class="remove-btn">Remover</button>
+                                    </div>
+
+                                    <div class="favorite-item">
+                                        <span>Hebraico Básico</span>
+                                        <button class="remove-btn">Remover</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="preference-block">
+
+                                <h3>Conteúdos salvos</h3>
+
+                                <div class="favorite-list">
+
+                                    <div class="favorite-item">
+                                        <span>Artigo — O que é Teshuvá?</span>
+                                        <button class="remove-btn">Remover</button>
+                                    </div>
+
+                                    <div class="favorite-item">
+                                        <span>Vídeo — Como ler o Alef-Bet</span>
+                                        <button class="remove-btn">Remover</button>
+                                    </div>
+
+                                    <div class="favorite-item">
+                                        <span>Termo — Tikkun Olam</span>
+                                        <button class="remove-btn">Remover</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CONFIGURAÇÕES -->
+
+                    <div class="panel" id="configuracoes">
+
+                        <div class="panel-card">
+
+                            <h2>Configurações</h2>
+
+                            <p class="panel-description">
+                                Ajuste como a Binah se comunica com você.
+                            </p>
+
+                            <div class="settings-group">
+
+                                <div class="setting-row">
+
+                                    <div>
+                                        <h3>Notificações por e-mail</h3>
+                                        <p>Receba lembretes de estudo e novidades.</p>
+                                    </div>
+
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+
+                                </div>
+
+                                <div class="setting-row">
+
+                                    <div>
+                                        <h3>Notificações push</h3>
+                                        <p>Avisos no navegador quando estiver online.</p>
+                                    </div>
+
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+
+                                </div>
+
+                                <div class="setting-row">
+
+                                    <div>
+                                        <h3>Perfil público</h3>
+                                        <p>Outros estudantes podem ver seu progresso.</p>
+                                    </div>
+
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+
+                                </div>
+
+                                <div class="setting-row">
+
+                                    <div>
+                                        <h3>Idioma</h3>
+                                        <p>Idioma da interface e dos conteúdos.</p>
+                                    </div>
+
+                                    <select class="language-select">
+                                        <option>Português</option>
+                                        <option>English</option>
+                                        <option>עברית</option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <h3>
+                    BINAH
+                </h3>
+
+                <p>
+                    Conhecimento organizado.
+                    Aprendizado com propósito.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="script/perfil.js"></script>
+
+</body>
+
+</html>

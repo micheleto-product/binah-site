@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Binah | Biblioteca</title>
+
+    <link rel="stylesheet" href="style/biblioteca.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                BINAH
+            </a>
+
+            <nav class="desktop-menu">
+
+                <a href="trilhas.html">Trilhas</a>
+                <a href="biblioteca.html" class="active">Biblioteca</a>
+                <a href="dashboard.html">Progresso</a>
+                <a href="perfil.html">Perfil</a>
+
+            </nav>
+
+            <button class="mobile-toggle" id="mobileToggle">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- MOBILE MENU -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="trilhas.html">Trilhas</a>
+        <a href="biblioteca.html">Biblioteca</a>
+        <a href="dashboard.html">Progresso</a>
+        <a href="perfil.html">Perfil</a>
+
+    </div>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="hero-content reveal">
+
+                <span class="eyebrow">
+                    Biblioteca
+                </span>
+
+                <h1>
+                    Consulte quando quiser.
+                </h1>
+
+                <p>
+                    Artigos, termos e vídeos organizados para você
+                    aprofundar um conceito específico — sem perder
+                    o fio da sua trilha.
+                </p>
+
+                <div class="search-bar">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+
+                    <input type="text" id="librarySearch"
+                        placeholder="Buscar por tema, termo ou palavra-chave...">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CATEGORIAS -->
+
+    <section class="filters-section">
+
+        <div class="container">
+
+            <div class="filter-chips reveal" id="filterChips">
+
+                <button class="chip active" data-category="todos">Todos</button>
+                <button class="chip" data-category="tradicao">Tradição</button>
+                <button class="chip" data-category="historia">História</button>
+                <button class="chip" data-category="lingua">Língua</button>
+                <button class="chip" data-category="cultura">Cultura</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ARTIGOS -->
+
+    <section class="library-section" id="artigos">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <span>Artigos</span>
+
+                <h2>
+                    Estudos e análises.
+                </h2>
+
+            </div>
+
+            <div class="article-grid" id="articleGrid">
+
+                <article class="article-card reveal" data-category="tradicao">
+
+                    <span class="tag">Tradição</span>
+
+                    <h3>O que é Teshuvá?</h3>
+
+                    <p>O conceito de retorno e por que ele é central na vida espiritual judaica.</p>
+
+                    <span class="meta">6 min de leitura</span>
+
+                </article>
+
+                <article class="article-card reveal" data-category="tradicao">
+
+                    <span class="tag">Tradição</span>
+
+                    <h3>Por que estudamos o Talmud em pares?</h3>
+
+                    <p>A lógica por trás do estudo em chavruta e o que ela ensina sobre debate.</p>
+
+                    <span class="meta">7 min de leitura</span>
+
+                </article>
+
+                <article class="article-card reveal" data-category="historia">
+
+                    <span class="tag">História</span>
+
+                    <h3>O Segundo Templo: ascensão e queda</h3>
+
+                    <p>Como um período de quinhentos anos moldou a vida judaica até hoje.</p>
+
+                    <span class="meta">9 min de leitura</span>
+
+                </article>
+
+                <article class="article-card reveal" data-category="historia">
+
+                    <span class="tag">História</span>
+
+                    <h3>Diáspora: como o povo se manteve unido</h3>
+
+                    <p>Dispersos geograficamente, conectados por texto, memória e prática.</p>
+
+                    <span class="meta">10 min de leitura</span>
+
+                </article>
+
+                <article class="article-card reveal" data-category="lingua">
+
+                    <span class="tag">Língua</span>
+
+                    <h3>De onde vêm os nomes hebraicos dos meses?</h3>
+
+                    <p>Um calendário que mistura astronomia, história e linguagem.</p>
+
+                    <span class="meta">5 min de leitura</span>
+
+                </article>
+
+                <article class="article-card reveal" data-category="cultura">
+
+                    <span class="tag">Cultura</span>
+
+                    <h3>O significado do Shabat na vida moderna</h3>
+
+                    <p>Por que parar uma vez por semana ainda faz sentido hoje.</p>
+
+                    <span class="meta">8 min de leitura</span>
+
+                </article>
+
+            </div>
+
+            <p class="empty-state" id="emptyState">
+                Nada encontrado. Tente outra palavra ou explore as categorias acima.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- GLOSSÁRIO -->
+
+    <section class="library-section glossary" id="glossario">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <span>Glossário</span>
+
+                <h2>
+                    Termos hebraicos, sem complicação.
+                </h2>
+
+            </div>
+
+            <div class="glossary-grid" id="glossaryGrid">
+
+                <div class="term-card reveal">
+                    <div class="term-hebrew">שָׁלוֹם</div>
+                    <h3>Shalom</h3>
+                    <p>Paz — usado também como saudação de chegada e despedida.</p>
+                </div>
+
+                <div class="term-card reveal">
+                    <div class="term-hebrew">מִצְוָה</div>
+                    <h3>Mitzvá</h3>
+                    <p>Mandamento — mas também qualquer ato de bondade praticado.</p>
+                </div>
+
+                <div class="term-card reveal">
+                    <div class="term-hebrew">תְּשׁוּבָה</div>
+                    <h3>Teshuvá</h3>
+                    <p>Retorno — o processo de reflexão, arrependimento e mudança.</p>
+                </div>
+
+                <div class="term-card reveal">
+                    <div class="term-hebrew">צְדָקָה</div>
+                    <h3>Tzedaká</h3>
+                    <p>Justiça social — frequentemente traduzida, de forma incompleta, como caridade.</p>
+                </div>
+
+                <div class="term-card reveal">
+                    <div class="term-hebrew">הֲלָכָה</div>
+                    <h3>Halachá</h3>
+                    <p>"O caminho" — o conjunto de leis e práticas judaicas.</p>
+                </div>
+
+                <div class="term-card reveal">
+                    <div class="term-hebrew">כָּבוֹד</div>
+                    <h3>Kavod</h3>
+                    <p>Honra — o respeito devido a pessoas, tradições e espaços.</p>
+                </div>
+
+                <div class="term-card reveal">
+                    <div class="term-hebrew">תִּקּוּן עוֹלָם</div>
+                    <h3>Tikkun Olam</h3>
+                    <p>Reparar o mundo — o dever de agir pela melhoria coletiva.</p>
+                </div>
+
+                <div class="term-card reveal">
+                    <div class="term-hebrew">לָשׁוֹן הָרָע</div>
+                    <h3>Lashon Hará</h3>
+                    <p>Fala maledicente — discurso que prejudica a reputação de alguém.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- VÍDEOS -->
+
+    <section class="library-section" id="videos">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <span>Vídeos</span>
+
+                <h2>
+                    Para aprender vendo.
+                </h2>
+
+            </div>
+
+            <div class="video-grid" id="videoGrid">
+
+                <article class="video-card reveal" data-category="tradicao">
+
+                    <div class="video-thumb">
+                        <span class="play-icon">▶</span>
+                        <span class="duration">5 min</span>
+                    </div>
+
+                    <span class="tag">Tradição</span>
+
+                    <h3>O que é o Talmud, em 5 minutos</h3>
+
+                </article>
+
+                <article class="video-card reveal" data-category="historia">
+
+                    <div class="video-thumb">
+                        <span class="play-icon">▶</span>
+                        <span class="duration">8 min</span>
+                    </div>
+
+                    <span class="tag">História</span>
+
+                    <h3>O Segundo Templo em 8 minutos</h3>
+
+                </article>
+
+                <article class="video-card reveal" data-category="lingua">
+
+                    <div class="video-thumb">
+                        <span class="play-icon">▶</span>
+                        <span class="duration">6 min</span>
+                    </div>
+
+                    <span class="tag">Língua</span>
+
+                    <h3>Como ler o Alef-Bet</h3>
+
+                </article>
+
+                <article class="video-card reveal" data-category="cultura">
+
+                    <div class="video-thumb">
+                        <span class="play-icon">▶</span>
+                        <span class="duration">9 min</span>
+                    </div>
+
+                    <span class="tag">Cultura</span>
+
+                    <h3>Por dentro de um Shabat</h3>
+
+                </article>
+
+                <article class="video-card reveal" data-category="historia">
+
+                    <div class="video-thumb">
+                        <span class="play-icon">▶</span>
+                        <span class="duration">11 min</span>
+                    </div>
+
+                    <span class="tag">História</span>
+
+                    <h3>A história da Diáspora</h3>
+
+                </article>
+
+                <article class="video-card reveal" data-category="tradicao">
+
+                    <div class="video-thumb">
+                        <span class="play-icon">▶</span>
+                        <span class="duration">4 min</span>
+                    </div>
+
+                    <span class="tag">Tradição</span>
+
+                    <h3>Bênçãos do dia a dia</h3>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <div class="cta-box reveal">
+
+                <span>Prefere um caminho?</span>
+
+                <h2>
+                    A Biblioteca é para consultar.
+                    As Trilhas são para evoluir.
+                </h2>
+
+                <button class="btn-primary" onclick="window.location.href='trilhas.html'">
+                    Ver Trilhas
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <h3>
+                    BINAH
+                </h3>
+
+                <p>
+                    Conhecimento organizado.
+                    Aprendizado com propósito.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="script/biblioteca.js"></script>
+
+</body>
+
+</html>
